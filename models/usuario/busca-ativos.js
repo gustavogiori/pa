@@ -14,6 +14,10 @@ module.exports = function (req, res, nextMiddleware) {
         ];
 
 
+        // exemplo de como pegar um parâmetro passado pelo header da requisição http:
+        //var id = req['headers']['colaborador-id'];
+
+
         mysql.query(
             "call sp_busca_usuarios_nome(?)"
             , params // parâmetros que serão passados para a procedure (uma ? para cada elemento do array)
